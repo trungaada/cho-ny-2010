@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💞 Mon Qua Cho Em 🌸</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink-light: #ffe6f2;
+            --pink-medium: #ffb6c1;
+            --pink-dark: #ff1493;
+            --pink-button: #ff69b4;
+            --pink-hover: #ff85c1;
+            --deep-pink-icon: #ff00ff; 
+            --shadow-light: rgba(255, 182, 193, 0.8);
+            --shadow-dark: rgba(255, 105, 180, 0.7);
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffb6c1, #ffe6f2, #ff69b4);
+            background-size: 300% 300%;
+            animation: backgroundPan 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--pink-dark);
+            font-family: 'Dancing Script', cursive; 
+            text-align: center;
+            overflow-x: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        @keyframes backgroundPan {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Khung nổi bật (Card) */
+        .gift-card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px; /* Giảm padding */
+            max-width: 700px; /* Giảm max-width */
+            width: 90%;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 0 50px var(--shadow-light);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 1s ease-out;
+            z-index: 10;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px) scale(0.9); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.4em; /* Giảm kích thước tiêu đề */
+            margin-bottom: 15px; /* Giảm khoảng cách dưới */
+            color: var(--pink-button);
+            text-shadow: 2px 2px 5px var(--shadow-light);
+            animation: pulse 2s infinite ease-in-out; 
+        }
+
+        @keyframes pulse {
+            0% { text-shadow: 0 0 5px var(--pink-medium); }
+            50% { text-shadow: 0 0 15px var(--pink-dark), 0 0 10px var(--pink-button); }
+            100% { text-shadow: 0 0 5px var(--pink-medium); }
+        }
+        
+        p {
+            font-family: 'Dancing Script', cursive; 
+            font-size: 1.4em; /* Đã giảm kích thước nội dung */
+            line-height: 1.5em; 
+            margin-bottom: 20px; /* Giảm khoảng cách dưới */
+            font-weight: 600; 
+            color: #333; 
+            opacity: 0;
+            transform: translateY(10px);
+            animation: slideIn 0.8s forwards;
+        }
+
+        @keyframes slideIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        p:nth-child(2) { animation-delay: 0.5s; }
+        p:nth-child(3) { animation-delay: 1.0s; }
+        p:nth-child(4) { animation-delay: 1.5s; }
+
+        b {
+            color: var(--pink-dark);
+            font-weight: 700;
+        }
+
+        p i, .back-btn i {
+            color: var(--deep-pink-icon); 
+            margin: 0 3px; /* Giảm khoảng cách icon một chút */
+        }
+
+        .back-btn {
+            font-family: 'Quicksand', sans-serif; 
+            display: inline-block;
+            padding: 10px 24px; /* Giảm padding nút */
+            background-color: var(--pink-button);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.0em; /* Giảm kích thước chữ nút */
+            text-decoration: none;
+            box-shadow: 0 5px 15px var(--shadow-dark);
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            font-weight: 700;
+            animation: slideIn 0.8s forwards;
+            animation-delay: 2.0s; 
+        }
+        .back-btn:hover {
+            transform: scale(1.05);
+            background-color: var(--pink-hover);
+            box-shadow: 0 8px 20px var(--shadow-dark);
+        }
+
+        /* Hiệu ứng vật thể rơi */
+        .heart {
+            position: absolute;
+            font-size: 18px; /* Giảm kích thước icon rơi */
+            animation: fall 5s linear infinite;
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 0;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .gift-card {
+                padding: 25px 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gift-card">
+        <h1>💞 Gửi Em, Người Con Gái Anh Yêu 🌸</h1>
+        
+        <p>Ngày 20/10 là dịp để anh nói rằng:
+        Cảm ơn em đã đến bên anh, mang đến niềm vui, sự ấm áp và yêu thương vô bờ.
+        Dù thời gian trôi qua thế nào, anh vẫn sẽ luôn trân trọng và yêu em như hôm nay. <i class="fas fa-heart"></i></p>
+
+        <p>Chúc người con gái tuyệt vời của anh luôn 
+        <b>xinh đẹp</b> <i class="fas fa-magic"></i>, 
+        <b>hạnh phúc</b> <i class="fas fa-sun"></i> và 
+        <b>thành công</b> <i class="fas fa-star"></i> trong mọi điều em theo đuổi. 
+        </p>
+        
+        <p>Hãy cứ là chính em, vì em đã là món quà quý giá nhất trong đời anh rồi! <i class="fas fa-gem"></i>
+        <br>Yêu em thật nhiều! 💖</p>
+        
+        <a href="#" class="back-btn"><i class="fas fa-arrow-left"></i> Quay Lại Trang Trước <i class="fas fa-feather-alt"></i></a>
+    </div>
+
+    <script>
+        // Hiệu ứng vật thể rơi (Trái tim, Hoa anh đào và các icon lãng mạn)
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            const icons = ['💗', '💖', '💘', '💝', '🌸', '🌹', '✨']; 
+            const colors = ['#ff00ff', '#ffc0cb', '#ff69b4']; // Magenta, Sakura Pink, Hot Pink
+
+            heart.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+            
+            // Thiết lập màu sắc ngẫu nhiên
+            heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+            
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            heart.style.animationDelay = (Math.random() * 2) + 's';
+            heart.style.fontSize = (Math.random() * 8 + 10) + 'px'; // Giảm kích thước icon rơi ngẫu nhiên
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 7000); 
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
